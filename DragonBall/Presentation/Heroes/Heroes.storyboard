@@ -16,43 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" text="" id="O2Q-vl-SJn">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="0qU-6r-CTD"/>
+                                </connections>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kXB-Jc-jdO">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="115" width="393" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="O2Q-vl-SJn">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                <view key="tableFooterView" hidden="YES" contentMode="scaleToFill" id="WAu-nh-bCZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="Y6W-OH-hqX" id="0qU-6r-CTD"/>
-                                    </connections>
-                                </searchBar>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Ryg-qG-BDd">
+                                            <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="0.69647439109999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Ryg-qG-BDd" firstAttribute="centerX" secondItem="WAu-nh-bCZ" secondAttribute="centerX" id="AE0-iF-QkI"/>
+                                        <constraint firstItem="Ryg-qG-BDd" firstAttribute="centerY" secondItem="WAu-nh-bCZ" secondAttribute="centerY" id="SFq-e2-WYp"/>
+                                    </constraints>
+                                </view>
                             </tableView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAu-nh-bCZ">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Ryg-qG-BDd">
-                                        <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.69647439109999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="Ryg-qG-BDd" firstAttribute="centerX" secondItem="WAu-nh-bCZ" secondAttribute="centerX" id="AE0-iF-QkI"/>
-                                    <constraint firstItem="Ryg-qG-BDd" firstAttribute="centerY" secondItem="WAu-nh-bCZ" secondAttribute="centerY" id="SFq-e2-WYp"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="kXB-Jc-jdO" firstAttribute="top" secondItem="O2Q-vl-SJn" secondAttribute="bottom" id="1jO-Mt-htB"/>
                             <constraint firstItem="kXB-Jc-jdO" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6xV-YE-zpm"/>
-                            <constraint firstAttribute="bottom" secondItem="WAu-nh-bCZ" secondAttribute="bottom" id="BMM-RH-9FU"/>
                             <constraint firstItem="kXB-Jc-jdO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CVU-92-rSg"/>
-                            <constraint firstItem="WAu-nh-bCZ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="SYN-cC-LC8"/>
-                            <constraint firstItem="kXB-Jc-jdO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Wk8-c9-lBg"/>
                             <constraint firstItem="kXB-Jc-jdO" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="e0T-7d-eHj"/>
-                            <constraint firstItem="WAu-nh-bCZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="j87-8X-dTH"/>
-                            <constraint firstItem="WAu-nh-bCZ" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="yEU-lz-VFc"/>
                         </constraints>
                     </view>
                     <connections>

@@ -20,19 +20,21 @@
                         <rect key="frame" x="28" y="19" width="337" height="218"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ahW-g6-Qbx">
-                                <rect key="frame" x="0.0" y="16" width="202" height="202"/>
+                                <rect key="frame" x="0.0" y="18" width="200" height="200"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="27f-HO-Vta"/>
                                     <constraint firstAttribute="width" secondItem="ahW-g6-Qbx" secondAttribute="height" multiplier="1:1" id="rTo-hq-Na7"/>
+                                    <constraint firstAttribute="height" constant="200" id="rVs-LZ-FfV"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-FV-2LD">
-                                <rect key="frame" x="8" y="8" width="321" height="0.0"/>
+                                <rect key="frame" x="8" y="8" width="321" height="2"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
                                 <color key="textColor" red="0.81084007020000004" green="0.45997279880000003" blue="0.0078820604830000009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvy-5l-SEH">
-                                <rect key="frame" x="210" y="16" width="123" height="194"/>
+                                <rect key="frame" x="208" y="18" width="125" height="192"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
