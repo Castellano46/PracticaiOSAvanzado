@@ -19,6 +19,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kXB-Jc-jdO">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="O2Q-vl-SJn">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="Y6W-OH-hqX" id="0qU-6r-CTD"/>
+                                    </connections>
+                                </searchBar>
                             </tableView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAu-nh-bCZ">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -26,23 +34,11 @@
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Ryg-qG-BDd">
                                         <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
                                     </activityIndicatorView>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="O2Q-vl-SJn">
-                                        <rect key="frame" x="0.0" y="80" width="393" height="56"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="0qU-6r-CTD"/>
-                                        </connections>
-                                    </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.69647439109999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="O2Q-vl-SJn" firstAttribute="leading" secondItem="WAu-nh-bCZ" secondAttribute="leading" id="9EW-IY-XPw"/>
                                     <constraint firstItem="Ryg-qG-BDd" firstAttribute="centerX" secondItem="WAu-nh-bCZ" secondAttribute="centerX" id="AE0-iF-QkI"/>
-                                    <constraint firstAttribute="trailing" secondItem="O2Q-vl-SJn" secondAttribute="trailing" id="HpL-wG-LRj"/>
                                     <constraint firstItem="Ryg-qG-BDd" firstAttribute="centerY" secondItem="WAu-nh-bCZ" secondAttribute="centerY" id="SFq-e2-WYp"/>
-                                    <constraint firstItem="O2Q-vl-SJn" firstAttribute="leading" secondItem="WAu-nh-bCZ" secondAttribute="leading" id="Y8w-BI-mqr"/>
-                                    <constraint firstAttribute="trailing" secondItem="O2Q-vl-SJn" secondAttribute="trailing" id="dY7-y7-wLa"/>
-                                    <constraint firstItem="O2Q-vl-SJn" firstAttribute="top" secondItem="WAu-nh-bCZ" secondAttribute="top" constant="80" id="uvh-JG-nh9"/>
                                 </constraints>
                             </view>
                         </subviews>

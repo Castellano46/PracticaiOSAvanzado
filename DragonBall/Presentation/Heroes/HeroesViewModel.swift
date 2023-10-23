@@ -8,6 +8,8 @@
 import Foundation
 
 class HeroesViewModel: HeroesViewControllerDelegate {
+    var viewModel: HeroesViewModel?
+    
     private let apiProvider: ApiProviderProtocol
     private let secureDataProvider: SecureDataProviderProtocol
 
@@ -15,12 +17,11 @@ class HeroesViewModel: HeroesViewControllerDelegate {
     var heroesCount: Int {
         heroes.count
     }
-    
+
     var heroes: Heroes = []
+    var originalHeroes: Heroes = []
 
-
-    init(apiProvider: ApiProviderProtocol,
-         secureDataProvider: SecureDataProviderProtocol) {
+    init(apiProvider: ApiProviderProtocol, secureDataProvider: SecureDataProviderProtocol) {
         self.apiProvider = apiProvider
         self.secureDataProvider = secureDataProvider
     }
@@ -32,8 +33,8 @@ class HeroesViewModel: HeroesViewControllerDelegate {
             defer { self.viewState?(.loading(false)) }
             guard let token = self.secureDataProvider.getToken() else { return }
 
-            self.apiProvider.getHeroes(by: nil,
-                                       token: token) { heroes in
+            self.apiProvider.getHeroes(by: nil, token: token) { heroes in
+                self.originalHeroes = heroes
                 self.heroes = heroes
                 self.viewState?(.updateData)
             }
@@ -42,17 +43,26 @@ class HeroesViewModel: HeroesViewControllerDelegate {
 
     func heroBy(index: Int) -> Hero? {
         if index >= 0 && index < heroesCount {
-            heroes[index]
+            return heroes[index]
         } else {
-            nil
+            return nil
         }
     }
-    
+
     func heroDetailViewModel(index: Int) -> HeroDetailViewControllerDelegate? {
         guard let selectedHero = heroBy(index: index) else { return nil }
-        return HeroDetailViewModel(hero: selectedHero, 
-                                   apiProvider: apiProvider,
-                                   secureDataProvider: secureDataProvider)
+        return HeroDetailViewModel(hero: selectedHero, apiProvider: apiProvider, secureDataProvider: secureDataProvider)
+    }
+
+    func filterHeroes(with searchText: String) {
+        if searchText.isEmpty {
+            heroes = originalHeroes
+        } else {
+            heroes = originalHeroes.filter { hero in
+                guard let name = hero.name?.lowercased() else { return false }
+                return name.contains(searchText.lowercased())
+            }
+        }
+        viewState?(.updateData)
     }
 }
-
