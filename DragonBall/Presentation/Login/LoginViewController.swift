@@ -26,9 +26,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailFieldError: UILabel!
     @IBOutlet weak var passwordFieldError: UILabel!
     @IBOutlet weak var loadingView: UIView!
-
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBAction func onLoginPressed() {
-        // Obtiene email y password del usuario y los envia a la api
+        
         viewModel?.onLoginPressed(
             email: emailField.text,
             password: passwordField.text)
@@ -43,6 +43,8 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        backgroundImage.image = UIImage(named: "fondo2")
+        backgroundImage.contentMode = .scaleAspectFill
         initViews()
         setObservers()
     }

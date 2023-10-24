@@ -26,6 +26,10 @@ class HeroDetailViewController: UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var heroDescription: UITextView!
     
+    @IBAction func backButtom() {
+        navigationController?.popViewController(animated: true)
+    }
+    
     var viewModel: HeroDetailViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -35,23 +39,17 @@ class HeroDetailViewController: UIViewController {
         viewModel?.onViewAppear()
     }
     
-    //private func initViews() {
-      //  mapView.delegate = self
-        
-  //  }
-    
     private func setObservers() {
         viewModel?.viewState = { [weak self] state in
             DispatchQueue.main.async {
                 switch state {
-                case .loading(let isLoading):
+                case .loading(_):
                     break
                     
                 case .update(let hero,
                              let locations):
                     self?.updateViews(hero: hero,
                                       heroLocations: locations)
-                    
                 }
             }
         }
@@ -74,7 +72,6 @@ class HeroDetailViewController: UIViewController {
                 )
             )
         }
-        
     }
     
     //Para hacer la imagen circular
@@ -87,10 +84,3 @@ class HeroDetailViewController: UIViewController {
     }
 }
 
-//extension HeroDetailViewController: MKMapViewDelegate {
-    
-//Funcion para cambiar la imagen de la chincheta del mapa
-  //  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-    //    return nil
-    //}
-//}
