@@ -57,16 +57,13 @@ class HeroesViewController: UIViewController {
        }
 
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard segue.identifier == "HEROES_TO_HERO_DETAIL",
-                  let index = sender as? Int,
-                  let heroDetailViewController = segue.destination as? HeroDetailViewController,
-                  let detailViewModel = viewModel?.heroDetailViewModel(index: index)
-            else {
-                return
+            if segue.identifier == "HEROES_TO_HERO_DETAIL",
+                   let index = sender as? Int,
+                   let heroDetailViewController = segue.destination as? HeroDetailViewController,
+                   let detailViewModel = viewModel?.heroDetailViewModel(index: index) {
+                    heroDetailViewController.viewModel = detailViewModel
+                }
             }
-
-            heroDetailViewController.viewModel = detailViewModel
-        }
 
            private func initViews() {
                tableView.register(

@@ -43,9 +43,9 @@
                                 </view>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-1u-D25" userLabel="logOut">
-                                <rect key="frame" x="0.0" y="763.66666666666663" width="393" height="34.333333333333371"/>
+                                <rect key="frame" x="171.66666666666666" y="763" width="50" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="house.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system"/>
                                 <connections>
                                     <action selector="logoutTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ke7-cn-FHS"/>
                                 </connections>
@@ -57,10 +57,9 @@
                             <constraint firstItem="kXB-Jc-jdO" firstAttribute="top" secondItem="O2Q-vl-SJn" secondAttribute="bottom" id="1jO-Mt-htB"/>
                             <constraint firstItem="kXB-Jc-jdO" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6xV-YE-zpm"/>
                             <constraint firstItem="kXB-Jc-jdO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CVU-92-rSg"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="5gU-1u-D25" secondAttribute="bottom" constant="20" id="L2a-kD-wFy"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5gU-1u-D25" secondAttribute="trailing" id="W6Q-6f-yEC"/>
+                            <constraint firstItem="5gU-1u-D25" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="a4F-KQ-MLA"/>
                             <constraint firstItem="kXB-Jc-jdO" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="e0T-7d-eHj"/>
-                            <constraint firstItem="5gU-1u-D25" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="tVd-Qo-Ztz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="5gU-1u-D25" secondAttribute="bottom" constant="20" id="w9P-jL-bw2"/>
                         </constraints>
                     </view>
                     <connections>
@@ -68,6 +67,7 @@
                         <outlet property="searchBar" destination="O2Q-vl-SJn" id="lei-iR-Vj0"/>
                         <outlet property="tableView" destination="kXB-Jc-jdO" id="9PI-c9-zYE"/>
                         <segue destination="Exf-sk-JRg" kind="show" identifier="HEROES_TO_HERO_DETAIL" id="iV3-av-IfH"/>
+                        <segue destination="CaB-9O-Vl4" kind="show" identifier="LoginViewController" id="NoS-5k-Bt3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -82,11 +82,21 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpu-kB-EEg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="17"/>
+            <point key="canvasLocation" x="961" y="-182"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="uLC-F9-RXh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="CaB-9O-Vl4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FB8-7W-k5u"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XUC-XQ-6EL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="104"/>
         </scene>
     </scenes>
     <resources>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

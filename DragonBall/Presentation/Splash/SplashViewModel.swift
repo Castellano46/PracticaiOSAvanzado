@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class SplashViewModel: SplashViewControllerDelegate {
     private let apiProvider: ApiProviderProtocol
     private let secureDataProvider: SecureDataProviderProtocol
