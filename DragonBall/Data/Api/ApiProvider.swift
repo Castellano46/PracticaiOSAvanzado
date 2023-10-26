@@ -42,23 +42,20 @@ class ApiProvider: ApiProviderProtocol {
                             forHTTPHeaderField: "Authorization")
 
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-            guard error == nil else {
-                return
-            }
+            var tokenValue: Any = ""
 
-            guard let data,
-                  (response as? HTTPURLResponse)?.statusCode == 200 else {
-                return
-            }
-
-            guard let responseData = String(data: data, encoding: .utf8) else {
-                return
+            if error == nil {
+                if let data, (response as? HTTPURLResponse)?.statusCode == 200 {
+                    if let responseData = String(data: data, encoding: .utf8) {
+                        tokenValue = responseData
+                    }
+                }
             }
 
             NotificationCenter.default.post(
                 name: NotificationCenter.apiLoginNotification,
                 object: nil,
-                userInfo: [NotificationCenter.tokenKey: responseData]
+                userInfo: [NotificationCenter.tokenKey: tokenValue]
             )
         }.resume()
     }

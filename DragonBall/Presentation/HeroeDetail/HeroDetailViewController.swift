@@ -62,18 +62,38 @@ class HeroDetailViewController: UIViewController {
         name.text = hero?.name
         heroDescription.text = hero?.description
         
-        heroLocations.forEach {
-            mapView.addAnnotation(
-                HeroAnnotation(title: hero?.name,
-                               info: hero?.id,
-                               coordinate: .init(
-                                latitude: Double($0.latitude ?? "") ?? 0.0,
-                                longitude: Double($0.longitude ?? "") ?? 0.0)
-                )
+        if let firstLocation = heroLocations.first {
+            let coordinate = CLLocationCoordinate2D(
+                latitude: Double(firstLocation.latitude!) ?? 0.0,
+                longitude: Double(firstLocation.longitude!) ?? 0.0
             )
+
+            centerMapOnHeroLocation(coordinate: coordinate)
+
+            heroLocations.forEach {
+                mapView.addAnnotation(
+                    HeroAnnotation(title: hero?.name,
+                                   info: hero?.id,
+                                   coordinate: .init(
+                                    latitude: Double($0.latitude ?? "") ?? 0.0,
+                                    longitude: Double($0.longitude ?? "") ?? 0.0)
+                    )
+                )
+            }
         }
     }
     
+    private func centerMapOnHeroLocation(coordinate: CLLocationCoordinate2D) {
+            let regionRadius: CLLocationDistance = 3000
+
+            let region = MKCoordinateRegion(
+                center: coordinate,
+                latitudinalMeters: regionRadius,
+                longitudinalMeters: regionRadius
+            )
+            mapView.setRegion(region, animated: true)
+        }
+
     //Para hacer la imagen circular
     private func makeRounded(image: UIImageView) {
         image.layer.borderWidth = 1
@@ -83,4 +103,3 @@ class HeroDetailViewController: UIViewController {
         image.clipsToBounds = true
     }
 }
-
