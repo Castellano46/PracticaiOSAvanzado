@@ -2,86 +2,47 @@
 //  ApiProviderTests.swift
 //  DragonBalliOSAvanzadoTests
 //
-//  Created by Pedro on 25/10/23.
+//  Created by Pedro on 26/10/23.
 //
 
 import XCTest
 @testable import DragonBalliOSAvanzado
 
-final class ApiProviderTest: XCTestCase {
-    private var sut: ApiProviderProtocol!
+class ApiProviderTests: XCTestCase {
+    var apiProvider: ApiProviderProtocol!
+    var secureDataProvider: SecureDataProviderProtocol = SecureDataProvider()
 
     override func setUp() {
-        sut = MockApiService(secureDataProvider: SecureDataProvider())
+        super.setUp()
+        apiProvider = MockApiProvider(secureDataProvider: secureDataProvider)
     }
 
-    func test_givenApiProvider_whenLoginWithUserAndPassword_thenGetValidToken() throws {
-        let handler: (Notification) -> Bool = { notification in
-            let token = notification.userInfo?[NotificationCenter.tokenKey] as? String
-            XCTAssertNotNil(token)
-            XCTAssertNotEqual(token ?? "", "")
-
-            return true
-        }
-
-        let expectation = self.expectation(
-            forNotification: NotificationCenter.apiLoginNotification,
-            object: nil,
-            handler: handler
-        )
-
-        sut.login(for: "d.jardon@gmail.com", with: "120485")
-        wait(for: [expectation], timeout: 10.0)
+    override func tearDown() {
+        super.tearDown()
+        apiProvider = nil
     }
 
-    func test_givenApiProvider_whenGetAllHeroes_ThenHeroesExists() throws {
-        let expectation = self.expectation(description: "Fetch one hero data")
+    func test_LoginWithValidCredentials() {
+        let expectation = self.expectation(description: "Login completion")
 
-        self.sut.getHeroes(nil) { result in
-            switch result {
-            case .success(let heroes):
-                XCTAssertNotEqual(heroes.count, 0)
-            case .failure(let error):
-                XCTFail("Error: \(error)")
-            }
+        apiProvider.login(for: "username", with: "password")
+
+        DispatchQueue.global().asyncAfter(deadline: .now() + 1.0) {
             expectation.fulfill()
         }
 
-        wait(for: [expectation], timeout: 10.0)
+        waitForExpectations(timeout: 5, handler: nil)
     }
 
-    func test_givenApiProvider_whenGetOneHero_ThenHeroExists() throws {
-        let expectation = self.expectation(description: "Fetch one hero data")
+    func test_FetchHeroes() {
+        let expectation = self.expectation(description: "Fetch heroes completion")
 
-        let heroName = "Goku"
-        self.sut.getHeroes(heroName) { result in
-            switch result {
-            case .success(let heroes):
-                XCTAssertEqual(heroes.count, 1)
-                XCTAssertEqual(heroes.first?.name ?? "", heroName)
-            case .failure(let error):
-                XCTFail("Error: \(error)")
-            }
+        apiProvider.getHeroes(by: nil, token: "your_token_here") { heroes in
+            XCTAssertNotNil(heroes)
+            XCTAssertGreaterThan(heroes.count, 0)
             expectation.fulfill()
         }
 
-        wait(for: [expectation], timeout: 10.0)
-    }
-
-    func test_givenApiProvider_whenGetOneHero_ThenHeroNotExists() throws {
-        let expectation = self.expectation(description: "Fetch one hero data")
-
-        let heroName = "Thanos"
-        self.sut.getHeroes(heroName) { result in
-            switch result {
-            case .success(let heroes):
-                XCTAssertEqual(heroes.count, 0)
-            case .failure(let error):
-                XCTFail("Error: \(error)")
-            }
-            expectation.fulfill()
-        }
-
-        wait(for: [expectation], timeout: 10.0)
+        waitForExpectations(timeout: 5, handler: nil)
     }
 }

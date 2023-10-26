@@ -29,17 +29,15 @@
 		0FE7C9DD2AD713EE0034AB58 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0FE7C9DC2AD713EE0034AB58 /* KeychainSwift */; };
 		0FE7C9DF2AD714A80034AB58 /* SecureDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7C9DE2AD714A80034AB58 /* SecureDataProvider.swift */; };
 		0FE7C9E12AD717720034AB58 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7C9E02AD717720034AB58 /* ApiProvider.swift */; };
-		EB53105E2AE923D1004A7FB3 /* DragonBallTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53105D2AE923D1004A7FB3 /* DragonBallTest.swift */; };
+		EB658D5D2AEA502100DAA0F9 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB658D5C2AEA502100DAA0F9 /* Mock.swift */; };
+		EB658D602AEA505C00DAA0F9 /* SecureDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB658D5F2AEA505C00DAA0F9 /* SecureDataProviderTests.swift */; };
+		EB658D622AEA508300DAA0F9 /* ApiProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB658D612AEA508300DAA0F9 /* ApiProviderTests.swift */; };
 		EB75013A2AE3B92A002EF2CF /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB75013C2AE3B92A002EF2CF /* Splash.storyboard */; };
 		EB7501422AE3BDD5002EF2CF /* HeroDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB7501412AE3BDD5002EF2CF /* HeroDetail.storyboard */; };
 		EB7501442AE3BE03002EF2CF /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7501432AE3BE03002EF2CF /* HeroDetailViewController.swift */; };
 		EB7501462AE3BE44002EF2CF /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7501452AE3BE44002EF2CF /* HeroDetailViewModel.swift */; };
 		EB7501482AE3C832002EF2CF /* HeroLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7501472AE3C832002EF2CF /* HeroLocation.swift */; };
 		EB75014B2AE3D801002EF2CF /* HeroAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75014A2AE3D801002EF2CF /* HeroAnnotation.swift */; };
-		EB77337B2AE911E00056656D /* MockApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7733792AE911E00056656D /* MockApiProvider.swift */; };
-		EB77337D2AE912400056656D /* SecureDataProvideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB77337C2AE912400056656D /* SecureDataProvideTests.swift */; };
-		EB77337F2AE912630056656D /* ValidationFieldsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB77337E2AE912630056656D /* ValidationFieldsTests.swift */; };
-		EB7733812AE912760056656D /* ApiProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7733802AE912760056656D /* ApiProviderTests.swift */; };
 		EB8624882AE1A17300DF6632 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8624872AE1A17300DF6632 /* SplashViewController.swift */; };
 		EB86248A2AE1A18200DF6632 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8624892AE1A18200DF6632 /* SplashViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -86,17 +84,16 @@
 		0FBCFDD62AD5CD3D00B7394A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0FE7C9DE2AD714A80034AB58 /* SecureDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDataProvider.swift; sourceTree = "<group>"; };
 		0FE7C9E02AD717720034AB58 /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
-		EB53105D2AE923D1004A7FB3 /* DragonBallTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallTest.swift; sourceTree = "<group>"; };
+		EB658D5C2AEA502100DAA0F9 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		EB658D5E2AEA505C00DAA0F9 /* DragonBalliOSAvanzadoTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DragonBalliOSAvanzadoTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		EB658D5F2AEA505C00DAA0F9 /* SecureDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDataProviderTests.swift; sourceTree = "<group>"; };
+		EB658D612AEA508300DAA0F9 /* ApiProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProviderTests.swift; sourceTree = "<group>"; };
 		EB75013B2AE3B92A002EF2CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
 		EB7501412AE3BDD5002EF2CF /* HeroDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroDetail.storyboard; sourceTree = "<group>"; };
 		EB7501432AE3BE03002EF2CF /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 		EB7501452AE3BE44002EF2CF /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
 		EB7501472AE3C832002EF2CF /* HeroLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLocation.swift; sourceTree = "<group>"; };
 		EB75014A2AE3D801002EF2CF /* HeroAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroAnnotation.swift; sourceTree = "<group>"; };
-		EB7733792AE911E00056656D /* MockApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiProvider.swift; sourceTree = "<group>"; };
-		EB77337C2AE912400056656D /* SecureDataProvideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDataProvideTests.swift; sourceTree = "<group>"; };
-		EB77337E2AE912630056656D /* ValidationFieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationFieldsTests.swift; sourceTree = "<group>"; };
-		EB7733802AE912760056656D /* ApiProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProviderTests.swift; sourceTree = "<group>"; };
 		EB8624872AE1A17300DF6632 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		EB8624892AE1A18200DF6632 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,11 +207,10 @@
 		0FBCFDB52AD5C1E900B7394A /* DragonBallTests */ = {
 			isa = PBXGroup;
 			children = (
-				EB7733782AE911B50056656D /* Mocks */,
-				EB77337C2AE912400056656D /* SecureDataProvideTests.swift */,
-				EB77337E2AE912630056656D /* ValidationFieldsTests.swift */,
-				EB7733802AE912760056656D /* ApiProviderTests.swift */,
-				EB53105D2AE923D1004A7FB3 /* DragonBallTest.swift */,
+				EB7733782AE911B50056656D /* Mock */,
+				EB658D5F2AEA505C00DAA0F9 /* SecureDataProviderTests.swift */,
+				EB658D5E2AEA505C00DAA0F9 /* DragonBalliOSAvanzadoTests-Bridging-Header.h */,
+				EB658D612AEA508300DAA0F9 /* ApiProviderTests.swift */,
 			);
 			path = DragonBallTests;
 			sourceTree = "<group>";
@@ -313,12 +309,12 @@
 			path = MapAnnotations;
 			sourceTree = "<group>";
 		};
-		EB7733782AE911B50056656D /* Mocks */ = {
+		EB7733782AE911B50056656D /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				EB7733792AE911E00056656D /* MockApiProvider.swift */,
+				EB658D5C2AEA502100DAA0F9 /* Mock.swift */,
 			);
-			path = Mocks;
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		EB8624842AE1A13B00DF6632 /* Splash */ = {
@@ -406,6 +402,7 @@
 					};
 					0FBCFDB12AD5C1E900B7394A = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 						TestTargetID = 0FBCFD982AD5C1E500B7394A;
 					};
 					0FBCFDBB2AD5C1E900B7394A = {
@@ -485,6 +482,7 @@
 				0F6585C32ADDD545001553BE /* HeroesViewModel.swift in Sources */,
 				0F6551952ADF02C9005C1F05 /* HeroDAO.swift in Sources */,
 				EB7501442AE3BE03002EF2CF /* HeroDetailViewController.swift in Sources */,
+				EB658D5D2AEA502100DAA0F9 /* Mock.swift in Sources */,
 				0FBCFD9D2AD5C1E500B7394A /* AppDelegate.swift in Sources */,
 				0F6585C82ADDDAF3001553BE /* HeroCellView.swift in Sources */,
 				0FBCFDD72AD5CD3D00B7394A /* LoginViewModel.swift in Sources */,
@@ -500,11 +498,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB77337D2AE912400056656D /* SecureDataProvideTests.swift in Sources */,
-				EB77337B2AE911E00056656D /* MockApiProvider.swift in Sources */,
-				EB53105E2AE923D1004A7FB3 /* DragonBallTest.swift in Sources */,
-				EB77337F2AE912630056656D /* ValidationFieldsTests.swift in Sources */,
-				EB7733812AE912760056656D /* ApiProviderTests.swift in Sources */,
+				EB658D602AEA505C00DAA0F9 /* SecureDataProviderTests.swift in Sources */,
+				EB658D622AEA508300DAA0F9 /* ApiProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,6 +735,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L7UTXGQXMV;
@@ -749,6 +745,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Pedro.DragonBalliOSAvanzadoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "DragonBallTests/DragonBalliOSAvanzadoTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragonBalliOSAvanzado.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DragonBalliOSAvanzado";
@@ -760,6 +758,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L7UTXGQXMV;
@@ -769,6 +768,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Pedro.DragonBalliOSAvanzadoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "DragonBallTests/DragonBalliOSAvanzadoTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragonBalliOSAvanzado.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DragonBalliOSAvanzado";

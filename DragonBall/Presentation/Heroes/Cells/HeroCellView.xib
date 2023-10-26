@@ -62,6 +62,7 @@
                     <constraint firstItem="FlS-5b-gmN" firstAttribute="leading" secondItem="aM7-ZP-0jJ" secondAttribute="leadingMargin" constant="8" id="tlH-jy-xrx"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.8459313450400362" green="0.8459313450400362" blue="0.8459313450400362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="containerView" destination="FlS-5b-gmN" id="3UR-Cn-Kv6"/>
                 <outlet property="heroDescription" destination="Nvy-5l-SEH" id="MmH-ZM-EKO"/>
