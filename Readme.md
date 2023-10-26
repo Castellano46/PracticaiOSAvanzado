@@ -29,7 +29,7 @@ Para su elaboración se han utilizado librerias externas como **Kingfisher** y *
 
 La instalación de esta App es muy sencilla, se trata de un repositorio que tan solo tendremos que descargar en zip, descomprimir en un MAC y abrirlo con XCode para disfrutar del contenido de esta app. 
 Una vez en XCode veremos todos los archivos .swift y .storyboard que lo componen (podremos modificar alguno si así lo deseamos).
-Para ver su contenido en el simulador únicamente tendremos que pulsar **PLAY** para de esta manera utilizar la App como si en terminal iPhone la tuviésemos. 
+Para ver su contenido en el simulador únicamente tendremos que pulsar **PLAY** ▶️ para, de esta manera, utilizar la App como si en terminal iPhone la tuviésemos. 
 
 ## Guía de usuario
 ---
